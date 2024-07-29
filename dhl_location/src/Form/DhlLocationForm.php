@@ -74,19 +74,18 @@ $response = $client->request('GET', 'https://api.dhl.com/location-finder/v1/find
 
   $str= $data_value['place']['address']['streetAddress'];
  $matches= $this->hasOddNumberInString($str);
- //dump(count($data_value['openingHours']));
+ // Plz test this module read this cooment code because according to your api odd number in their address and do not work on weekends. data is not avalible in this condition//
 
  
- //if both condition is work then data come from according to requirement
- //if($matches==true && count($data_value['openingHours'])==5){
- //if condition streetadrees match
- //if($matches==true){
- //if condition is remove the weekend data.
+ //*if both below condition is true then data come from according to your requirement *//
+ //if($matches==true && count($data_value['openingHours'])==5){`
+ //*if streetadrees match in odd then data will show below contion is true then countryCode is DE and city is Dresden and postal code is 01067 *//
+ if($matches==true){
+  //*This condition is remove the weekend data and Put the countryCode is CZ and city is Prague and postal code is 11000*//
   //if(count($data_value['openingHours'])==5){
- if(count($data_value['openingHours'])==5){
-  $adreessfilter[]= $data_value;
-
- }
+   $adreessfilter[]= $data_value;
+ 
+  }
   
 }
 
