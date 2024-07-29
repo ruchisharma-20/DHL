@@ -1,0 +1,7 @@
+name: 'DHL Location Finder'
+type: module
+description: 'Provides a form to find DHL locations based on country, city, and postal code.'
+package: custom
+core_version_requirement: ^10
+dependencies:
+  - drupal:field

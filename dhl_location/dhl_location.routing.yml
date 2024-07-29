@@ -1,0 +1,8 @@
+dhl_location.form:
+  path: '/dhl-location'
+  defaults:
+    _title: 'DHL Location Filter'
+    _form: '\Drupal\dhl_location\Form\DhlLocationForm'
+  requirements:
+    _permission: 'access content'
+    
